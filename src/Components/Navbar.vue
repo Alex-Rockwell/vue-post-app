@@ -1,8 +1,9 @@
 <template>
   <div class="navbar">
     <my-button class="my-button" @click="$router.push('/')">Home</my-button>
-    <router-link class="link" to="/posts">Posts</router-link>
+    <router-link class="link" to="/contacts">Contacts</router-link>
     <router-link class="link" to="/about">About</router-link>
+    <router-link class="link" to="/store">Store</router-link>
   </div>
 </template>
 

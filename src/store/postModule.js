@@ -6,12 +6,12 @@ export const postModule = {
         isPostsLoading: false,
         selectedSort: '',
         searchQuery: '',
-        page: 1,
+        page: 0,
         limit: 10,
         totalPages: 0,
         sortOptions: [
-            {value: 'title', name: 'По названию'},
-            {value: 'body', name: 'По содержимому'},
+            {value: 'title', name: 'По названию', id: Date.now()},
+            {value: 'body', name: 'По содержимому', id: Date.now()},
         ]
     }),
     getters: {

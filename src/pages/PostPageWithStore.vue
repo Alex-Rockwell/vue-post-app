@@ -1,18 +1,23 @@
 <template>
   <div>
     <h1>Страница с постами</h1>
-    <!-- <my-input v-model="searchQuery" placeholder="Поиск..."/> -->
+    <my-input 
+      :model-value="searchQuery" 
+      @update:model-value="setSearchQuery"
+      placeholder="Поиск..."
+    />
     <div class="app-btns">
       <my-button
         @click="showDialog"
       >
         Создать 
       </my-button>
-      <!-- <my-select
-        v-model="selectedSort"
+      <my-select
+        :model-value="selectedSort"
+        @update:model-value="setSelectedSort"
         :options="sortOptions"
       >
-      </my-select> -->
+      </my-select>
     </div>
 
     <my-dialog v-model:show="dialogVisible">
@@ -55,6 +60,8 @@ export default {
   methods: {
     ...mapMutations({
       setPage: 'post/setPage',
+      setSearchQuery: 'post/setSearchQuery',
+      setSelectedSort: 'post/setSelectedSort',
     }),
     ...mapActions({
       fetchPosts: 'post/fetchPosts',

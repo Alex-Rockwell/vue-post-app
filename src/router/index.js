@@ -4,6 +4,7 @@ import PostDetails from '@/Components/PostDetails.vue'
 import Contacts from '../pages/Contacts.vue'
 import About from '../pages/About.vue'
 import PostPageWithStore from '../pages/PostPageWithStore.vue'
+import PostPageCompositionAPIVue from '../pages/PostPageCompositionAPI.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -27,6 +28,10 @@ const router = createRouter({
     {
       path: '/store',
       component: PostPageWithStore,
+    },
+    {
+      path: '/composition',
+      component: PostPageCompositionAPIVue,
     },
   ]
 })
